@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
 public class TipCalculator {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("What is your bill?");                                       //Asks for bill
@@ -14,7 +13,7 @@ public class TipCalculator {
         System.out.println("How many people are splitting the bill?");                  //Asks for the number of people
         int numberOfPeople = scan.nextInt();                                            //Initializes the number of people
 
-        double tip = (double) tipPercentage / 100 + 1;                                //Converts the tip into a double that can be multiplied with bill to find total bill
+        double tip = (double) tipPercentage / 100 + 1;                                  //Converts the tip into a double that can be multiplied with bill to find total bill
         double totalBillWithTip = totalBill * tip;                                      //Calculates the total bill including the tip
         double totalPerPerson = totalBillWithTip / numberOfPeople;                      //Calculates how much each person has to pay
         double totalTip = totalBillWithTip - totalBill;                                 //Calculates how much the total tip is
@@ -23,5 +22,6 @@ public class TipCalculator {
         System.out.println("Your total bill is: " + totalBillWithTip);                  //Prints out the total bill including tip
         System.out.println("The tip person will be: " + tipPerPerson);                  //Prints out how much each person has to pay for tips
         System.out.println("And the total per person will be: " + totalPerPerson);      //Prints out how much each person has to pay in total
+        String format = decimalFormat.format
     }
 }
